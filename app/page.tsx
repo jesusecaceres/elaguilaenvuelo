@@ -18,7 +18,7 @@ export default function Home() {
       {/* Cinematic Background */}
       <div className="absolute inset-0">
         <Image
-          src="/images/cinematic-banner.png"
+          src="/cinematic-banner.png" // ✅ updated image name
           alt="El Águila Cinematic Banner"
           fill
           className="object-cover opacity-95"
@@ -35,7 +35,7 @@ export default function Home() {
         className="relative z-10 flex flex-col items-center"
       >
         <Image
-          src="/images/logo.png"
+          src="/logo.png" // ✅ confirmed name
           alt="El Águila Logo"
           width={420}
           height={420}
