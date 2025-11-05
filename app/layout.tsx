@@ -113,5 +113,18 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+import Footer from "@/components/Footer";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="es">
+      <body className="bg-black text-white">
+        <Header />
+        <main className="pt-24">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
 
 
