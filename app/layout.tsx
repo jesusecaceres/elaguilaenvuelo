@@ -36,27 +36,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               color: '#fff',
             }}>
               <span style={{ fontSize: 22, fontWeight: 800 }}>El Águila</span>
-              <span style={{ fontSize: 12, opacity: .8 }}>Vuela con nosotros</span>
-            </a>
-            <nav style={{ display: 'flex', gap: 18, fontSize: 14 }}>
-              <a href="/news" style={linkStyle}>News</a>
-              <a href="/entertainment" style={linkStyle}>Entertainment</a>
-              <a href="/magazine" style={linkStyle}>Magazine</a>
-              <a href="/coupons" style={linkStyle}>Coupons</a>
-              <a href="/sweepstakes" style={linkStyle}>Sweepstakes</a>
-            </nav>
-          </div>
-        </header>
 
-        {children}
-
-        <footer style={{
-          background: '#0d0d0d',
-          color: '#fff',
-          marginTop: 40,
-        }}>
-          <div style={{
-            maxWidth: 1200,
-            margin: '0 auto',
-            padding: '24px 20px',
-            fontSize: 14,
