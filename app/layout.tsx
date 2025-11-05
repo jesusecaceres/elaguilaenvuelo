@@ -101,5 +101,17 @@ function linkStyle() {
     transition: "background .2s ease",
   } as React.CSSProperties;
 }
+import Header from "@/components/Header";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="es">
+      <body className="bg-black text-white">
+        <Header />
+        <main className="pt-24">{children}</main>
+      </body>
+    </html>
+  );
+}
 
 
