@@ -3,7 +3,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300 border-t border-yellow-500 mt-20">
+    <footer className="bg-gradient-to-b from-black to-[#1a1a1a] text-gray-300 border-t-2 border-yellow-500 shadow-[0_-2px_10px_rgba(255,215,0,0.2)] mt-20">
+
       <div className="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-10">
         
         {/* Logo + Motto */}
