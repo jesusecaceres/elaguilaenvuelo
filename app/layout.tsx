@@ -1,14 +1,17 @@
 import "./globals.css";
-import type { ReactNode } from "react";
+import { ReactNode } from "react";
 
 export const metadata = {
   title: "El Águila — Orgullo Latino Sin Fronteras",
   description: "Vuela con nosotros.",
 };
 
-export default function RootLayout(props: { children: ReactNode }) {
-  const { children } = props;
+// ✅ This version explicitly declares the type
+interface RootLayoutProps {
+  children: ReactNode;
+}
 
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
       <body className="bg-black text-white font-sans">{children}</body>
