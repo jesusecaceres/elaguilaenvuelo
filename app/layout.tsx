@@ -6,11 +6,9 @@ export const metadata = {
   description: "Vuela con nosotros.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout(props: { children: ReactNode }) {
+  const { children } = props;
+
   return (
     <html lang="es">
       <body className="bg-black text-white font-sans">{children}</body>
