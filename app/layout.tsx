@@ -1,6 +1,6 @@
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "El Águila — Orgullo Latino Sin Fronteras",
@@ -11,13 +11,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body className="bg-black text-white font-sans">
-        {/* Header (fixed at top) */}
+        {/* Header */}
         <Header />
 
-        {/* Main content area */}
+        {/* Main Content */}
         <main className="pt-24 min-h-screen">{children}</main>
 
-        {/* Footer (cinematic gold edition) */}
+        {/* Footer */}
         <Footer />
       </body>
     </html>
