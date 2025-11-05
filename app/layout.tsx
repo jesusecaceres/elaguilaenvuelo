@@ -6,7 +6,6 @@ export const metadata = {
   description: "Vuela con nosotros.",
 };
 
-// ✅ This version explicitly declares the type
 interface RootLayoutProps {
   children: ReactNode;
 }
