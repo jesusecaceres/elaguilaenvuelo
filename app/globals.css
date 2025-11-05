@@ -1,26 +1,74 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* === Global Base Styles === */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gold: #ffd700;
+  --gold-dark: #b8860b;
+  --black: #000000;
+  --gray: #1a1a1a;
+  --text-light: #f3f3f3;
+  --text-muted: #b3b3b3;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--black);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* === Links === */
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+a:hover {
+  color: var(--gold-dark);
 }
+
+/* === Buttons (Default Look) === */
+button {
+  background-color: var(--gold);
+  color: var(--black);
+  border: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--gold-dark);
+}
+
+/* === Headings === */
+h1, h2, h3, h4 {
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* === Utility Tweaks === */
+.text-gold {
+  color: var(--gold);
+}
+
+.bg-gold {
+  background-color: var(--gold);
+}
+
+.border-gold {
+  border-color: var(--gold);
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
