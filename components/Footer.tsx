@@ -1,4 +1,5 @@
-import Link from "next/link";
+<footer className="bg-red-600 text-white mt-20">
+
 import Image from "next/image";
 
 export default function Footer() {
