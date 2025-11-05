@@ -121,10 +121,8 @@ export default function RootLayout({ children }) {
       <body className="bg-black text-white">
         <Header />
         <main className="pt-24">{children}</main>
-        <Footer />
+        <Footer />   {/* 👈 this must be here */}
       </body>
     </html>
   );
 }
-
-
