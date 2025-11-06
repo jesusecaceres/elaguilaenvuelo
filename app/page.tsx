@@ -1,3 +1,8 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
     <main className="relative h-screen w-full flex items-center justify-center text-center text-white overflow-hidden">
@@ -5,28 +10,35 @@ export default function Home() {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/images/flags-banner.jpg')`, // replace with your blended flags image
+          backgroundImage: "url('/images/cinematic-banner.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.9)",
         }}
       ></div>
 
-      {/* Gold Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60 backdrop-blur-sm"></div>
+      {/* Subtle Black & Gold Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80"></div>
 
-      {/* Content */}
-      <section className="relative z-10 px-4 max-w-2xl">
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide text-yellow-400 drop-shadow-lg">
-          El Águila — Orgullo Latino Sin Fronteras
-        </h1>
-        <p className="text-lg md:text-2xl mb-8 italic text-gray-100">
-          Vuela con nosotros
-        </p>
-        <a
-          href="/revista"
-          className="inline-block bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-3 px-6 rounded-full transition-all duration-300 shadow-lg"
-        >
-          Explora la Revista
-        </a>
-      </section>
+      {/* Logo Animation */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        className="relative z-10 flex flex-col items-center justify-center"
+      >
+        <Image
+          src="/images/logo.png"
+          alt="El Águila Logo"
+          width={500}
+          height={500}
+          className="drop-shadow-[0_0_25px_rgba(255,215,0,0.6)]"
+          priority
+        />
+      </motion.div>
+
+      {/* Cinematic Fade at Bottom */}
+      <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
     </main>
   );
 }
