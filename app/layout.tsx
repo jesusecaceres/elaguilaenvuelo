@@ -1,25 +1,19 @@
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { ReactNode } from "react";
 
 export const metadata = {
   title: "El Águila — Orgullo Latino Sin Fronteras",
-  description: "El Águila en Vuelo: Noticias, Cultura y Comunidad Latina.",
+  description: "Vuela con nosotros.",
 };
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es">
-      <body className="bg-black text-white font-sans">
-        {/* Header */}
-        <Header />
-
-        {/* Main Content */}
-        <main className="pt-24 min-h-screen">{children}</main>
-
-        {/* Footer */}
-        <Footer />
-      </body>
+      <body className="bg-black text-white font-sans">{children}</body>
     </html>
   );
 }
