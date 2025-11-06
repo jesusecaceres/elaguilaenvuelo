@@ -1,5 +1,15 @@
-"scripts": {
-  "dev": "next dev",
-  "build": "next build --no-turbo",
-  "start": "next start"
+{
+  "name": "elaguilaenvuelo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --no-turbo",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
 }
